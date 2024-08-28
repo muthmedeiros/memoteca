@@ -19,7 +19,17 @@ export class ThoughtService {
       );
   }
 
+  getById(id: number): Observable<Thought> {
+    const url = `${this.API_URL}/${id}`;
+    return this.http.get<Thought>(url);
+  }
+
   create(thought: Thought): Observable<Thought> {
     return this.http.post<Thought>(this.API_URL, thought);
+  }
+
+  delete(id: number): Observable<Thought> {
+    const url = `${this.API_URL}/${id}`;
+    return this.http.delete<Thought>(url);
   }
 }

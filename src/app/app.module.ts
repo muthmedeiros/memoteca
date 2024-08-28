@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CreateThoughtComponent } from './components/thoughts/create-thought/create-thought.component';
 import { ListThoughtsComponent } from './components/thoughts/list-thoughts/list-thoughts.component';
 import { ThoughtCardComponent } from './components/thoughts/thought-card/thought-card.component';
+import { DeleteThoughtComponent } from './components/thoughts/delete-thought/delete-thought.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ThoughtCardComponent } from './components/thoughts/thought-card/thought
     CreateThoughtComponent,
     ThoughtCardComponent,
     ListThoughtsComponent,
+    DeleteThoughtComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
