@@ -4,19 +4,43 @@
       "id": 1,
       "content": "Que bom que vc veio",
       "authorship": "Nay",
-      "model": "model1"
+      "type": 2
     },
     {
       "id": 2,
       "content": "Estudando Angular",
       "authorship": "Dev Alura",
-      "model": "model2"
+      "type": 3
     },
     {
       "id": 3,
-      "content": "Angular é o melhor'",
+      "content": "I love Angulaaaar",
       "authorship": "Dev Alura",
-      "model": "model3"
+      "type": 1
+    },
+    {
+      "type": 1,
+      "content": "Teste Redirect",
+      "authorship": "muthmedeiros",
+      "id": 4
+    },
+    {
+      "type": 1,
+      "content": "Meu pensamento louco louco louco voa voa voa",
+      "authorship": "medeiroooos",
+      "id": 5
+    },
+    {
+      "type": 1,
+      "content": "Vou te levar daqui yeah!",
+      "authorship": "CBJ",
+      "id": 6
+    },
+    {
+      "type": "2",
+      "content": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "authorship": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "id": 7
     }
   ]
 }

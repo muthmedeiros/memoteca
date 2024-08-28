@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ThoughtCardModel } from '../thought-card/thought-card.model';
-import { ThoughtCardTypes } from '../thought-card/thought-card.types';
+import { Thought } from '../thought';
+import { ThoughtService } from '../thought.service';
 
 @Component({
   selector: 'app-list-thoughts',
@@ -8,23 +8,14 @@ import { ThoughtCardTypes } from '../thought-card/thought-card.types';
   styleUrl: './list-thoughts.component.css',
 })
 export class ListThoughtsComponent {
-  thoughtsList: Array<ThoughtCardModel> = [
-    new ThoughtCardModel(
-      ThoughtCardTypes.Type1,
-      'I love Angular',
-      'Murilo Medeiros'
-    ),
-    new ThoughtCardModel(
-      ThoughtCardTypes.Type2,
-      'I love Angularrrrrr',
-      'Muthmuth'
-    ),
-    new ThoughtCardModel(
-      ThoughtCardTypes.Type3,
-      'I loooooove Angular',
-      'medeirosValle'
-    ),
-  ];
+  thoughtsList: Thought[] = [];
 
-  constructor() {}
+  constructor(private service: ThoughtService) {}
+
+  ngOnInit(): void {
+    this.service.getAll().subscribe((thoughtsList) => {
+      this.thoughtsList = thoughtsList;
+      console.log(this.thoughtsList);
+    });
+  }
 }

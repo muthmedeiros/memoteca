@@ -1,6 +1,9 @@
-import { Location } from '@angular/common';
+// import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Thought } from '../thought';
+import { ThoughtType } from '../thought-types';
+import { ThoughtService } from '../thought.service';
 
 @Component({
   selector: 'app-create-thought',
@@ -8,19 +11,20 @@ import { Router } from '@angular/router';
   styleUrl: './create-thought.component.css',
 })
 export class CreateThoughtComponent {
-  thought = {
-    id: '1',
-    content: 'Aprendendo Angular',
-    authorship: 'Dev',
-    model: 'model1',
-  };
+  thought: Thought = new Thought(ThoughtType.Type1, '', '');
 
-  constructor(private location: Location, private router: Router) {}
+  constructor(
+    // private location: Location,
+    private router: Router,
+    private service: ThoughtService
+  ) {}
 
   ngOnInit(): void {}
 
   create() {
-    alert('Novo pensamento criado!');
+    this.service.create(this.thought).subscribe(() => {
+      this.router.navigate(['/list-thoughts']);
+    });
   }
 
   cancel() {

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ThoughtCardModel } from './thought-card.model';
+import { Thought } from '../thought';
 
 @Component({
   selector: 'app-thought-card',
@@ -7,7 +7,7 @@ import { ThoughtCardModel } from './thought-card.model';
   styleUrl: './thought-card.component.css',
 })
 export class ThoughtCardComponent {
-  @Input() thought!: ThoughtCardModel;
+  @Input() thought!: Thought;
 
   ngOnInit(): void {}
 

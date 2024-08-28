@@ -28,9 +28,9 @@
           <input
             type="radio"
             id="model1"
-            value="model1"
+            value="1"
             name="model-card"
-            [(ngModel)]="thought.model"
+            [(ngModel)]="thought.type"
           />
           <div class="custom-radio">
             <span></span>
@@ -39,7 +39,7 @@
         </label>
         <h3>Prévia:</h3>
         <div class="model model1 ff-roboto-mono">
-          <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis" />
+          <img src="../../../../assets/imagens/model1.png" alt="Aspas azuis" />
           <p class="content">{{ thought.content }}</p>
           <p class="authorship">
             <b>{{ thought.authorship }}</b>
@@ -51,9 +51,9 @@
           <input
             type="radio"
             id="model2"
-            value="model2"
+            value="2"
             name="model-card"
-            [(ngModel)]="thought.model"
+            [(ngModel)]="thought.type"
           />
           <div class="custom-radio">
             <span></span>
@@ -63,7 +63,7 @@
         <h3>Prévia:</h3>
         <div class="model model2 ff-roboto-mono">
           <img
-            src="../../../../assets/imagens/modelo2.png"
+            src="../../../../assets/imagens/model2.png"
             alt="Aspas azuis claro"
           />
           <p class="content">{{ thought.content }}</p>
@@ -77,9 +77,9 @@
           <input
             type="radio"
             id="model3"
-            value="model3"
+            value="3"
             name="model-card"
-            [(ngModel)]="thought.model"
+            [(ngModel)]="thought.type"
           />
           <div class="custom-radio">
             <span></span>
@@ -89,7 +89,7 @@
         <h3>Prévia:</h3>
         <div class="model model3 ff-roboto-mono">
           <img
-            src="../../../../assets/imagens/modelo3.png"
+            src="../../../../assets/imagens/model3.png"
             alt="Aspas verdes"
           />
           <p class="content">{{ thought.content }}</p>

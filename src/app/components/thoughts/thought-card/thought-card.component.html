@@ -1,10 +1,10 @@
 <div
-  class="thought {{ thought.model }} ff-roboto-mono"
+  class="thought {{ thought.model() }} ff-roboto-mono"
   [ngClass]="thoughtWidth()"
 >
   <img
-    src="/assets/imagens/{{ thought.model }}.png"
-    alt="Aspas {{ thought.colorAltText }}"
+    src="/assets/imagens/{{ thought.model() }}.png"
+    alt="Aspas {{ thought.colorAltText() }}"
   />
   <p class="content">{{ thought.content }}</p>
   <p class="authorship">
