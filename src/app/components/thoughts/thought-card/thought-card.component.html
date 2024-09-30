@@ -11,7 +11,10 @@
     <b>{{ thought.authorship }}</b>
   </p>
   <div class="actions">
-    <button class="edit-button">
+    <button
+      class="edit-button"
+      routerLink="/thoughts/edit-thought/{{ thought.id }}"
+    >
       <img src="/assets/imagens/edit-icon.png" alt="Ícone de editar" />
     </button>
     <button

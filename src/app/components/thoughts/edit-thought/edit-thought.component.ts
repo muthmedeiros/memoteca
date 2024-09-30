@@ -4,12 +4,12 @@ import { Thought } from '../thought';
 import { ThoughtService } from '../thought.service';
 
 @Component({
-  selector: 'app-delete-thought',
-  templateUrl: './delete-thought.component.html',
-  styleUrl: './delete-thought.component.css',
+  selector: 'app-edit-thought',
+  templateUrl: './edit-thought.component.html',
+  styleUrl: './edit-thought.component.css',
 })
-export class DeleteThoughtComponent {
-  thought!: Thought;
+export class EditThoughtComponent {
+  thought?: Thought;
 
   constructor(
     private service: ThoughtService,
@@ -19,11 +19,11 @@ export class DeleteThoughtComponent {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-
     if (id) {
       this.service
         .getById(parseInt(id))
         .subscribe((thought) => (this.thought = thought));
+      // TODO: create loading state on template with ngIf
       return;
     }
 
@@ -31,8 +31,8 @@ export class DeleteThoughtComponent {
     alert('Pensamento não encontrado!');
   }
 
-  deleteThought() {
-    this.service.delete(this.thought.id!).subscribe(() => {
+  editThought() {
+    this.service.edit(this.thought!).subscribe(() => {
       this.router.navigate(['/list-thoughts']);
     });
   }
